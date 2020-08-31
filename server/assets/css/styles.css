@@ -66,6 +66,12 @@ button {
   word-wrap: break-word;
 }
 
+.content.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Steam form */
 .steam__form__noties {
   padding: 15px;
@@ -174,6 +180,12 @@ button {
 
 .footer__navigation li a {
   display: block;
+}
+
+/* 404 */
+.fourofour {
+  text-align: center;
+  font-size: 30px;
 }
 
 @media (max-width: 1050px) {

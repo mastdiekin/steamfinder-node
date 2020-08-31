@@ -32,10 +32,10 @@ module.exports = {
    * @param title {String} Заголовок ошибки
    */
   error: (req, res, message, title) => {
-    return res.render("admin/error", {
+    return res.render("404", {
       title: title || "404",
       name: title || "404",
-      message: message || "Страница не найдена",
+      message: message || "Page not found",
       libs: [],
       scripts: [],
     });
