@@ -1,0 +1,118 @@
+<%- include('../layout/head.ejs') %>
+
+<!-- begin content -->
+<div class="content">
+    <%- include('./form.ejs', { val }) %>
+    <!-- begin steam__data -->
+    <div class="steam__data">
+        <div class="steam__data__item avatar">
+            <img src="<%=data.avatarfull %>" alt="">
+        </div>
+        <div class="steam__data__item">
+            <span>steamid:</span>
+            <span class="data">
+                <%=data.steamid %>
+            </span>
+        </div>
+        <div class="steam__data__item">
+            <span>communityvisibilitystate:</span>
+            <span class="data">
+                <%=data.communityvisibilitystate %>
+            </span>
+        </div>
+        <div class="steam__data__item">
+            <span>profilestate:</span>
+            <span class="data">
+                <%=data.profilestate %>
+            </span>
+        </div>
+        <div class="steam__data__item">
+            <span>personaname:</span>
+            <span class="data">
+                <%=data.personaname %>
+            </span>
+        </div>
+        <div class="steam__data__item">
+            <span>commentpermission:</span>
+            <span class="data">
+                <%=data.commentpermission %>
+            </span>
+        </div>
+        <div class="steam__data__item">
+            <span>profileurl:</span>
+            <span class="data">
+                <%=data.profileurl %>
+            </span>
+        </div>
+        <div class="steam__data__item">
+            <span>avatar:</span>
+            <span class="data">
+                <%=data.avatar %>
+            </span>
+        </div>
+        <div class="steam__data__item">
+            <span>avatarmedium:</span>
+            <span class="data">
+                <%=data.avatarmedium %>
+            </span>
+        </div>
+        <div class="steam__data__item">
+            <span>avatarfull:</span>
+            <span class="data">
+                <%=data.avatarfull %>
+            </span>
+        </div>
+        <div class="steam__data__item">
+            <span>avatarhash:</span>
+            <span class="data">
+                <%=data.avatarhash %>
+            </span>
+        </div>
+        <div class="steam__data__item">
+            <span>lastlogoff:</span>
+            <span class="data">
+                <%=data.lastlogoff %>
+            </span>
+        </div>
+        <div class="steam__data__item">
+            <span>personastate:</span>
+            <span class="data">
+                <%=data.personastate %>
+            </span>
+        </div>
+        <div class="steam__data__item">
+            <span>realname:</span>
+            <span class="data">
+                <%=data.realname %>
+            </span>
+        </div>
+        <div class="steam__data__item">
+            <span>primaryclanid:</span>
+            <span class="data">
+                <%=data.primaryclanid %>
+            </span>
+        </div>
+        <div class="steam__data__item">
+            <span>timecreated:</span>
+            <span class="data">
+                <%=data.timecreated %>
+            </span>
+        </div>
+        <div class="steam__data__item">
+            <span>personastateflags:</span>
+            <span class="data">
+                <%=data.personastateflags %>
+            </span>
+        </div>
+        <div class="steam__data__item">
+            <span>loccountrycode:</span>
+            <span class="data">
+                <%=data.loccountrycode %>
+            </span>
+        </div>
+    </div>
+    <!-- end steam__data -->
+</div>
+<!-- end content -->
+
+<%- include('../layout/foot.ejs') %>

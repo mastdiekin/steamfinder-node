@@ -1,0 +1,14 @@
+<%- include('../layout/head.ejs') %>
+
+<!-- begin content -->
+<div class="content">
+    <%- include('./form.ejs', { val }) %>
+    <!-- begin error -->
+    <div class="error">
+        <%= errorMessage %> 
+    </div>
+    <!-- end error -->
+</div>
+<!-- end content -->
+
+<%- include('../layout/foot.ejs') %>

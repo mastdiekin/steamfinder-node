@@ -1,0 +1,186 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fonts */
+@font-face {
+  font-family: "Open Sans";
+  src: url("/assets/fonts/OpenSans/OpenSansRegular/OpenSansRegular.ttf")
+      format("ttf"),
+    url("/assets/fonts/OpenSans/OpenSansRegular/OpenSansRegular.woff")
+      format("woff"),
+    url("/assets/fonts/OpenSans/OpenSansRegular/OpenSansRegular.eot")
+      format("eot");
+}
+
+@font-face {
+  font-family: "Open Sans Bold";
+  src: url("/assets/fonts/OpenSans/OpenSansBold/OpenSansBold.ttf") format("ttf"),
+    url("/assets/fonts/OpenSans/OpenSansBold/OpenSansBold.woff") format("woff"),
+    url("/assets/fonts/OpenSans/OpenSansBold/OpenSansBold.eot") format("eot");
+}
+
+html,
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #377096;
+}
+
+a:hover,
+a:active {
+  color: #000000;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Layout */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.footer {
+  flex: 0 0 auto;
+}
+
+.content {
+  width: 1024px;
+  margin: 0 auto;
+  padding: 0 15px;
+  flex: 1 0 auto;
+  word-wrap: break-word;
+}
+
+/* Steam form */
+.steam__form__noties {
+  padding: 15px;
+  border-radius: 2px 2px 0 0;
+  background: #f8f8f8;
+  word-wrap: break-word;
+}
+
+.steam__form__noties span {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.steam__form {
+  padding: 15px 0;
+}
+
+.steam__form form {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.steam__form button {
+  width: 70px;
+  background: #377096;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 0 2px 2px 0;
+}
+
+.steam__form button:hover {
+  background: #000000;
+}
+
+.steam__form input {
+  width: calc(100% - 70px);
+  border: 1px solid #377096;
+  padding: 0 15px;
+  outline: none;
+  border-radius: 0 0 0 2px;
+}
+
+.steam__form input:focus {
+  border-color: #000;
+}
+
+.steam__form button,
+.steam__form input {
+  display: block;
+  height: 35px;
+}
+
+.steam__data__item {
+  margin-bottom: 15px;
+  word-break: break-word;
+}
+
+.steam__data__item span {
+  display: inline-block;
+  margin-right: 10px;
+  min-width: 200px;
+}
+
+/* Navigation */
+.navigation {
+  margin-top: 15px;
+}
+
+.navigation ul {
+  list-style: none;
+}
+
+.navigation li {
+  display: inline-block;
+}
+
+.navigation li a {
+  display: block;
+  padding: 5px 13px;
+}
+
+.footer {
+  padding: 15px;
+  background: #377096;
+  color: #ffffff;
+}
+
+.footer a {
+  color: #ffffff;
+}
+
+.footer a:hover {
+  color: #000000;
+}
+
+.footer__navigation li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.footer__navigation li:last-child {
+  margin-right: 0;
+}
+
+.footer__navigation li a {
+  display: block;
+}
+
+@media (max-width: 1050px) {
+  .content {
+    width: 100%;
+  }
+  .steam__data__item span {
+    min-width: auto;
+  }
+}

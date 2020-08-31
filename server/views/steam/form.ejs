@@ -1,0 +1,17 @@
+<%- include('../layout/navigation.ejs') %>
+<!-- begin steam__form -->
+<div class="steam__form">
+    <div class="steam__form__noties">
+        <span><b>Examples:</b></span>
+        <span>STEAM_0:0:20820115</span>
+        <span>76561198001905958</span>
+        <span>ElviS6</span>
+        <span>https://steamcommunity.com/id/ElviS6</span>
+        <span>https://steamcommunity.com/profiles/76561198001905958</span>
+    </div>
+    <form action="/steam/" method="POST">
+        <input name="data" id="data" type="text" placeholder="Enter SteamID / SteamCommunityID / Profile Name / Profile URL" value="<%= val %>">
+        <button>Send</button>
+    </form>
+</div>
+<!-- end steam__form -->
