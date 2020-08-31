@@ -1,5 +1,5 @@
 const express = require("express");
-const api = require("./routes/api");
+const api = require("./routes/routes");
 const path = require("path");
 const bodyParser = require("body-parser");
 const flash = require("connect-flash");
