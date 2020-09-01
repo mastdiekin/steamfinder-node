@@ -89,7 +89,7 @@ api.get("/:steamid", latestRequests, async (req, res) => {
       });
     } else {
       let saveToDb = await saveDataToDb(data);
-      if (!saveToDb) console.log("dupe data");
+      // if (!saveToDb) console.log("dupe data");
       return res.render("steam/success", {
         title: `Steam ID Finder - ${fetchData.personaname}`,
         data: fetchData,
