@@ -48,6 +48,12 @@ button {
 }
 
 /* Layout */
+.main__title {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -73,9 +79,23 @@ button {
 }
 
 /* Steam form */
+.requests {
+  padding: 15px;
+  background: #ececec;
+  border-radius: 2px 2px 0 0;
+}
+
+.requests a {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.requests a:last-child {
+  margin-bottom: 0;
+}
+
 .steam__form__noties {
   padding: 15px;
-  border-radius: 2px 2px 0 0;
   background: #f8f8f8;
   word-wrap: break-word;
 }
@@ -101,7 +121,7 @@ button {
   background: #377096;
   color: #fff;
   text-transform: uppercase;
-  border-radius: 0 2px 2px 0;
+  border-radius: 0 0 2px 0;
 }
 
 .steam__form button:hover {

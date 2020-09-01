@@ -23,9 +23,12 @@
     "express": "^4.17.1",
     "locutus": "^2.0.11",
     "sanitize-html": "^1.27.4",
+    "sequelize": "^6.3.4",
+    "sqlite3": "^5.0.0",
     "xml-js": "^1.6.11"
   },
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.4",
+    "sequelize-cli": "^6.2.0"
   }
 }

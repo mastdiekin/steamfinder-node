@@ -5,6 +5,8 @@ const config = require("../../config/config.json");
 const bcadd = require("locutus/php/bc/bcadd");
 const getSTEAM = require("../../util/getSteam");
 const getXMLby = require("../../util/getXml");
+const saveDataToDb = require("../../middleware/saveDataToDb");
+const latestRequests = require("../../middleware/latestRequests");
 
 api.post("/", async (req, res) => {
   let { data } = req.body;
@@ -13,7 +15,7 @@ api.post("/", async (req, res) => {
   return res.redirect(`/steam/${data}`);
 });
 
-api.get("/:steamid", async (req, res) => {
+api.get("/:steamid", latestRequests, async (req, res) => {
   let { steamid } = req.params;
   let data = steamid;
 
@@ -75,6 +77,7 @@ api.get("/:steamid", async (req, res) => {
 
   try {
     fetchData = await getSTEAM($steam_api, $realokay);
+
     if (fetchData.error) {
       return res.render("steam/error", {
         title: "Steam ID Finder - Error",
@@ -82,12 +85,16 @@ api.get("/:steamid", async (req, res) => {
         val: data,
         error: true,
         errorMessage: "User not found!",
+        requests: req.latestRequests,
       });
     } else {
+      let saveToDb = await saveDataToDb(data);
+      if (!saveToDb) console.log("dupe data");
       return res.render("steam/success", {
         title: `Steam ID Finder - ${fetchData.personaname}`,
         data: fetchData,
         val: data,
+        requests: req.latestRequests,
       });
     }
   } catch (error) {

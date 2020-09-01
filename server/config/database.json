@@ -1,0 +1,34 @@
+{
+  "development": {
+    "username": "root",
+    "password": null,
+    "host": "./database.sqlite",
+    "dialect": "sqlite",
+    "options": {
+      "operatorsAliases": false
+    },
+    "dialectOptions": {
+      "dateStrings": true,
+      "typeCast": true
+    },
+    "logging": false
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "host": "./database.sqlite",
+    "dialect": "sqlite",
+    "options": {
+      "operatorsAliases": false
+    }
+  },
+  "production": {
+    "username": "root",
+    "password": null,
+    "host": "./database.sqlite",
+    "dialect": "sqlite",
+    "options": {
+      "operatorsAliases": false
+    }
+  }
+}

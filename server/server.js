@@ -4,6 +4,7 @@ const path = require("path");
 const bodyParser = require("body-parser");
 const flash = require("connect-flash");
 const _u = require("./util/utility");
+const db = require("./db/db");
 
 //create app
 const app = express();
@@ -22,7 +23,13 @@ app.set("views", path.join(__dirname, "/views"));
 app.use(api);
 
 const port = process.env.PORT || 5000;
-app.listen(port, () => {
-  _u.colenv("server");
-  console.log(`Server listen on ${port} port`);
-});
+
+db.sync()
+  .then(async () => {
+    console.log("Connected to DB");
+    app.listen(port, () => {
+      _u.colenv("server");
+      console.log(`Server listen on ${port} port`);
+    });
+  })
+  .catch((e) => console.log(e));
